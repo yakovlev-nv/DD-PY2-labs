@@ -11,7 +11,6 @@ BOOKS_DATABASE = [
     }
 ]
 
-
 class Book:
     def __init__(self, id_, name, pages):
         self.id_ = id_
@@ -23,8 +22,6 @@ class Book:
 
     def __repr__(self) -> str:
         return f"Book(id_={self.id_}, name='{self.name}', pages={self.pages})"
-
-
 
 class Library:
     def __init__(self, books = []):
@@ -38,8 +35,6 @@ class Library:
             if book.id_ == id_:
                 return self.books.index(book)
         raise ValueError("Книги с запрашиваемым id не существует")
-
-
 
 if __name__ == '__main__':
     empty_library = Library()  # инициализируем пустую библиотеку
