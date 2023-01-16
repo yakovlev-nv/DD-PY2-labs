@@ -15,7 +15,7 @@ class Library:
     """ возвращает индекс книги в списке """
         for index, book in enumerate(self.books):
             if book.id_ == id_:
-                return self.books.index(book)
+                return index
         raise ValueError("Книги с запрашиваемым id не существует")
 
 if __name__ == '__main__':
