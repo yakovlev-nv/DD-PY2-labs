@@ -21,7 +21,7 @@ class Book:
         return f'Книга "{self.name}"'
 
     def __repr__(self) -> str:
-        return f"Book(id_={self.id_}, name='{self.name}', pages={self.pages})"
+        return f"Book(id_={self.id_}, name={self.name!r}, pages={self.pages})"
 
 if __name__ == '__main__':
     # инициализируем список книг
