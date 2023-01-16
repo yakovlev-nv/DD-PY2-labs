@@ -18,7 +18,7 @@ class Book:
         self.pages = pages
 
     def __str__(self):
-        return f'Книга "{self.name}"'
+        return f'Книга {self.name!r}'
 
     def __repr__(self) -> str:
         return f"Book(id_={self.id_}, name={self.name!r}, pages={self.pages})"
