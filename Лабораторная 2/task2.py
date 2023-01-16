@@ -1,27 +1,4 @@
-BOOKS_DATABASE = [
-    {
-        "id": 1,
-        "name": "test_name_1",
-        "pages": 200,
-    },
-    {
-        "id": 2,
-        "name": "test_name_2",
-        "pages": 400,
-    }
-]
-
-class Book:
-    def __init__(self, id_, name, pages):
-        self.id_ = id_
-        self.name = name
-        self.pages = pages
-
-    def __str__(self):
-        return f'Книга "{self.name}"'
-
-    def __repr__(self) -> str:
-        return f"Book(id_={self.id_}, name='{self.name}', pages={self.pages})"
+from task1 import Book, BOOKS_DATABASE
 
 class Library:
     def __init__(self, books = []):
