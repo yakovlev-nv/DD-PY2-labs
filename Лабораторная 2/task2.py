@@ -2,7 +2,8 @@ from task1 import Book, BOOKS_DATABASE
 
 class Library:
     def __init__(self, books = None):
-        self.books = books
+        if books == None:
+            self.books = []
 
     def get_next_book_id(self) -> int:
     """ возвращает идентификатор для добавления новой книги в библиотеку """
