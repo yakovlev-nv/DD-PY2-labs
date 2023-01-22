@@ -8,7 +8,7 @@ class Library:
     def get_next_book_id(self) -> int:
     """ возвращает идентификатор для добавления новой книги в библиотеку """
         if self.books:
-            return self.books[-1].id_
+            return self.books[-1].id_ + 1
         else:
             return 1
 
