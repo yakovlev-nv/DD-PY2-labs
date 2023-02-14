@@ -1,18 +1,17 @@
-from typing import Union
 class Kettle:
     """класс Чайник"""
-    def __init__(self, volume: Union[int, float], water_inside: Union[int, float]):
+    def __init__(self, volume: float, water_inside: float):
         """
         @param volume: объем чайника
-        @type volume: Union[int,float]
+        @type volume: float
         @param water_inside: объем воды в чайнике
-        @type water_inside: Union[int,float]
+        @type water_inside: float
         """
         self.volume = volume
         self.water_inside = water_inside
         if volume < water_inside:
             raise ValueError
-    def pour_water(self, water:Union[int,float]):
+    def pour_water(self, water:float):
         """Надить воды в чайник"""
         if water + self.water_inside < self.volume:
             self.water_inside += water
@@ -27,15 +26,15 @@ class Kettle:
         return f"{self.__class__.__name__}(volume = {self.volume}, water_inside = {self.water_inside})"
 class ElectricKettle(Kettle):
     """Класс Электрический чайник"""
-    def __init__(self, volume: Union[int, float], water_inside: Union[int, float]):
+    def __init__(self, volume: float, water_inside: float):
         """
         @param volume: объем чайника
-        @type volume: Union[int,float]
+        @type volume: float
         @param water_inside: объем воды в чайнике
-        @type water_inside: Union[int,float]
+        @type water_inside: float
         """
         super().__init__(volume, water_inside)
-    def pour_water(self, water: Union[int, float]):
+    def pour_water(self, water: float):
         """Надить воды в чайник"""
         if water + self.water_inside < self.volume:
             self.water_inside += water
